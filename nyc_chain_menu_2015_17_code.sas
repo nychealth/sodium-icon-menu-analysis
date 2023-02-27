@@ -1,13 +1,13 @@
 /*Code for results in “Sodium content of menu items in New York City chain restaurants following enforcement of the sodium warning icon rule, 2015-2017”*/
-/*Dataset posted on Github*/
-/*Please review accompanying README file and codebook posted on Github*/
+/*Dataset posted on Github: https://github.com/nychealth/sodium-icon-menu-analysis/blob/main/nyc_chain_menu_2015_17.sas7bdat*/
+/*Please review accompanying README file and codebook posted on Github: https://github.com/nychealth/sodium-icon-menu-analysis*/
 
-/*Call in dataset*/
-/*insert libname and filepath here*/
+/*Call in dataset - example call-in satement below*/
+libname sodium_icon_menu_analysis 'C:\MyFolder'; /*replace libname if another preference; replace filepath to location where dataset saved*/
 /*1763 observations and 17 variables.*/
 
 data long;
-/*set step - insert datafile name here*/
+set sodium_icon_menu_analysis.nyc_chain_menu_2015_17; /*set statement = libname assigned in call-in statement above, filename of dataset posted to github repository*/
 run;
 /*1763 observations and 17 variables.*/
 
